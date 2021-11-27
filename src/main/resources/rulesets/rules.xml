@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<ruleset name="Custom Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        My custom rules
+    </description>
+
+    <rule name="WhileLoopsMustUseBracesRule"
+          since="6.40.0"
+          message="Avoid using 'while' statements without using curly braces"
+          class="com.dylan.rules.WhileLoopsMustUseBracesRule">
+        <description>
+            WhileLoopsMustUseBracesRule
+        </description>
+        <priority>4</priority>
+        <example>
+            <![CDATA[
+				public void doSomething() {
+				    while (true)
+				    x++;
+				}
+			]]>
+        </example>
+    </rule>
+
+</ruleset>

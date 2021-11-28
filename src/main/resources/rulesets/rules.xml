@@ -27,4 +27,25 @@
         </example>
     </rule>
 
+    <rule name="WhileLoopsMustUseBracesXpath"
+          language="java"
+          message="while loops must use braces"
+          class="net.sourceforge.pmd.lang.rule.XPathRule">
+        <description>
+
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="version" value="2.0"/>
+            <property name="xpath">
+                <value>
+                    <![CDATA[
+//WhileStatement/Statement/StatementExpression
+]]>
+                </value>
+            </property>
+        </properties>
+    </rule>
+
+
 </ruleset>
